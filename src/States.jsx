@@ -87,7 +87,7 @@ const States = () => {
                 )
             })}
         </select>
-        {display && <p>You Selected {data.city}, {data.state}, {data.country}</p>}
+        {display && <p>You selected {data.city}, {data.state}, {data.country}</p>}
         
     </div>
   )
