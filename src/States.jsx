@@ -70,8 +70,8 @@ const States = () => {
             })}
         </select>
 
-        <select onChange={(e) => handleState(data.country, e.target.value)}>
-            <option value='' selected disabled>Select State</option>
+        <select disabled={!data.country} onChange={(e) => handleState(data.country, e.target.value)}>
+            <option value='' disabled selected >Select State</option>
             {Array.isArray(states) && states.map((state,idx) => {
                 return (
                     <option key={idx} value={state}>{state}</option>
@@ -79,8 +79,8 @@ const States = () => {
             })}
         </select>
 
-        <select onChange={(e) => handleCities(e.target.value)}>
-            <option value='' selected disabled>Select City</option>
+        <select disabled={!data.state} onChange={(e) => handleCities(e.target.value)}>
+            <option value='' disabled selected >Select City</option>
             {Array.isArray(cities) && cities.map((city,idx) => {
                 return (
                     <option key={idx} value={city}>{city}</option>
